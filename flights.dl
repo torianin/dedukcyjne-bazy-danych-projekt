@@ -1,0 +1,16 @@
+city_airport(City, Airport) :-
+  city(City),
+  airport(Airport),
+  airport(Airport, _, City).
+
+direct_connection(From, To) :-
+  route(From, To, _).
+  
+connection(From, To) :-
+  direct_connection(From, To).
+connection(From, To) :-
+  direct_connection(From, Mid),
+  connection(Mid, To).
+
+flights_from(Airline, Airport) :-
+  route(Airport, _, Airline). 
