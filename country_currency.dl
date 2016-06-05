@@ -1,10 +1,12 @@
 %
 % Country currency:
 %  country_currency(name, currency).
-% Źródło danych iPolak
 %
 % Example query
 % country_currency(X,eur).
+%
+% Źródło danych iPolak
+%
 
 country_currency(pol, pln).
 country_currency(phl, php).

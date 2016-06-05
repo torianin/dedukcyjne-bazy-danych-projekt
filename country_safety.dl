@@ -1,8 +1,9 @@
 %
 % Country safety:
 %  country_safety(name, safety level, more information).
-
-% /[country.dl, country_safety.dl]
+%
+% Źródło danych iPolak
+%
 
 % -- TO DO -- 
 

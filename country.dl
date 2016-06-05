@@ -1,3 +1,5 @@
+% Źródło danych iPolak
+
 country(pol).
 country(phl).
 country(bhs).

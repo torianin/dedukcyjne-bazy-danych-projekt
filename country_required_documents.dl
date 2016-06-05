@@ -1,6 +1,9 @@
 %
 % Country currency:
 %  country_required_documents(name, required_document).
+%
+% Źródło danych iPolak
+%
 
 country_required_documents(phl, paszport).
 country_required_documents(dma, paszport).
