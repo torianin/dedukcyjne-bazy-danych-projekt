@@ -1,0 +1,29 @@
+city_airport(City, Airport) :-
+  city(City),
+  airport(Airport),
+  airport(Airport, _, City).
+
+flights_from_with_company(Airline, Airport) :-
+  flight(Airport, _, _, Airline). 
+
+direct(From, To) :-
+  flight(From, To, _, _).
+  
+gen_connection(From, To, Price, 1) :-
+  flight(From, To, Price, _),
+  From \= To.
+gen_connection(From, To, Price, Hops) :-
+  flight(From, Mid, P1, _),
+  gen_connection(Mid, To, P2, Hs),
+  From \= To,
+  count(airport(_), Na),
+  Hs < Na, 
+  Hops is Hs+1, 
+  Price is P1+P2.
+
+cheapest_connection(From, To, Price) :-
+  min(gen_connection(From, To, P, _), P, Price).
+
+min_hop_connection(From, To, Hops) :-
+  min(gen_connection(From, To, _, Hs), Hs, Hops).
+
