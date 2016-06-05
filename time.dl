@@ -1,0 +1,42 @@
+m(1).
+m(1).
+m(2).
+m(3).
+m(4).
+m(5).
+m(6).
+m(7).
+m(8).
+m(9).
+m(10).
+m(11).
+m(12).
+
+month(0, 0).
+month(1, 31).
+month(2, 29).
+month(3, 31).
+month(4, 30).
+month(5, 31).
+month(6, 30).
+month(7, 31).
+month(8, 31).
+month(9, 30).
+month(10, 31).
+month(11, 30).
+month(12, 31).
+
+prev_months(Mn, Pr, Dys) :-
+  m(Mn),
+  month(Pr, Dys),
+  Pr < Mn.
+   
+% Example query
+% time(2,2,10,4,TimeInMinutes).
+
+time(Mn,Day,Hours,Minutes,TimeInMinutes) :-
+  m(Mn),
+  sum(prev_months(Mn, _, D), D, Sum1),
+  Days is Sum1+Day,
+  TimeInHours is Days*24+Hours,
+  TimeInMinutes is TimeInHours*60+Minutes.
