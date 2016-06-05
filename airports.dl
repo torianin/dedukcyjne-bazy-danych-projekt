@@ -1,0 +1,55 @@
+
+%
+% Airline companies
+
+company(plllot).
+company(lufthansa).
+company(aircanada).
+
+
+%
+% Cities with airports and airlines:
+%   airport(IATA code, country code, city)
+%   operates(airline, IATA code).
+
+airport(Airport) :-
+  airport(Airport, _, City),
+  city(City).
+
+operates(Airline, Airport) :-
+  flight(Airport, _, _, Airline).
+oprates(Airline, Airport) :-
+  flight(_, Airport, _, Airline).
+
+city(krakow).
+airport(krk, pol, krakow).
+
+city(warszawa).
+airport(waw, pol, warszawa).
+
+city(munchen).
+airport(muc, deu, munchen).
+
+city(telaviv).
+airport(tlv, isr, telaviv).
+
+city(london).
+airport(lhr, gbr, london).
+
+city(paris).
+airport(cdg, fra, paris).
+
+city(newyork).
+airport(jfk, usa, newyork).
+
+city(roma).
+airport(fco, ita, roma).
+
+city(montreal).
+airport(yul, can, montreal).
+
+city(toronto).
+airport(yyz, can, toronto).
+
+
+

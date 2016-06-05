@@ -1,0 +1,26 @@
+%
+% Country currency:
+%  country_required_documents(name, required_document).
+%
+% Źródło danych iPolak
+%
+
+country_required_documents(phl, paszport).
+country_required_documents(dma, paszport).
+country_required_documents(drk, wiza).
+country_required_documents(cyp, paszport).
+country_required_documents(cyp, dowod_osobisty).
+country_required_documents(aus, wiza).
+country_required_documents(fin, paszport).
+country_required_documents(fin, dowod_osobisty).
+country_required_documents(eri, wiza).
+country_required_documents(tcd, wiza).
+country_required_documents(egy, wiza).
+country_required_documents(gmb, paszport).
+country_required_documents(est, paszport).
+country_required_documents(dji, wiza).
+country_required_documents(eth, wiza).
+country_required_documents(dnk, paszport).
+country_required_documents(dnk, dowod_osobisty).
+country_required_documents(fji, paszport).
+country_required_documents(gha, wiza).

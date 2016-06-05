@@ -1,0 +1,31 @@
+%
+% Flights:
+%  flight(from, to, price, company).
+
+flight(krk, waw, 260, plllot).
+flight(krk, muc, 430, plllot).
+flight(krk, tlv, 2000, plllot).
+
+flight(waw, krk, 250, plllot).
+flight(waw, lhr, 608, plllot).
+flight(waw, cdg, 960, plllot).
+flight(waw, jfk, 1918, plllot).
+flight(waw, yyz, 1886, plllot).
+
+flight(lhr, waw, 920, plllot).
+
+flight(cdg, waw, 900, plllot).
+
+flight(muc, fco, 563, lufthansa).
+
+flight(fco, muc, 550, lufthansa).
+
+flight(tlv, waw, 1776, plllot).
+
+flight(jfk, waw, 3794, plllot).
+
+flight(yyz, waw, 4061, plllot).
+
+flight(yyz, yul, 497, aircanada).
+
+flight(yul, yyz, 500, aircanada).
