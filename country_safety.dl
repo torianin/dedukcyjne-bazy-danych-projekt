@@ -1,0 +1,63 @@
+%
+% Country safety:
+%  country_safety(name, safety level, more information).
+
+% /[country.dl, country_safety.dl]
+
+% -- TO DO -- 
+
+country_safety(X,0,Z).
+
+	????????????
+
+country_safety(tcd, 3, czad_ostrzezenie_dla_podrozujacych).
+country_safety(ukr, 4, ukraina_obwody_doniecki_zaporoski_i_luganski_zawieszenie_dzialalnosci_konsulatu_generalnego_rp_w_doniecku).
+country_safety(syr, 4, syria_aktualizacja_ostrzezenia_dla_podrozujacych).
+country_safety(ukr, 4, ukraina_krym_ostrzezenie_dla_podrozujacych).
+country_safety(ukr, 3, ukraina_ostrzezenie_dla_podrozujacych_aktualizacja).
+country_safety(mar, 2, krolestwo_maroka_ostrzezenie_dla_podrozujacych).
+country_safety(tha, 1, tajlandia_ostrzezenie_dla_podrozujacych).
+country_safety(zaf, 1, republika_poludniowej_afryki_komunikat_dla_podrozujacych).
+country_safety(syr, 4, syria_aktualizacja_ostrzezenia_dla_podrozujacych).
+country_safety(ukr, 4, ukraina_krym_zawieszenie_dzialalnosci_konsulatu_generalnego_rp_w_sewastopolu).
+country_safety(lby, 4, libia_komunikat_dla_podrozujacych).
+country_safety(afg, 4, afganistan_ostrzezenie_dla_podrozujacych).
+country_safety(ssd, 3, sudan_poludniowy_ostrzezenie_dla_podrozujacych).
+country_safety(lby, 4, libia_komunikat_dla_podrozujacych).
+country_safety(col, 2, kolumbia_ostrzezenie_dla_podrozujacych).
+country_safety(dza, 3, algieria_ostrzezenie_dla_podrozujacych).
+country_safety(yem, 4, jemen_ostrzezenie_dla_podrozujacych).
+country_safety(eth, 2, etiopia_ostrzezenie_dla_podrozujacych).
+country_safety(sdn, 3, sudan_ostrzezenie_dla_podrozujacych).
+country_safety(mrt, 3, mauretania_ostrzezenie_dla_podrozujacych).
+country_safety(sen, 2, senegal_ostrzezenie_dla_podrozujacych).
+country_safety(cmr, 3, kamerun_ostrzezenie_dla_podrozujacych).
+country_safety(irq, 3, irak_aktualizacja_ostrzezenia_dla_podrozujacych).
+country_safety(som, 4, somalia_ostrzezenie_dla_podrozujacych).
+country_safety(ner, 3, niger_ostrzezenie_dla_podrozujacych).
+country_safety(isr, 2, izrael_jerozolima_wschodnia_strefa_gazy_i_terytoria_podlegle_palestynskiej_wladzy_narodowej_ostrzezenie_dla_podrozujacych).
+country_safety(phl, 2, filipiny_ostrzezenie_dla_podrozujacych).
+country_safety(jor, 2, jordania_ostrzezenie_dla_podrozujacych).
+country_safety(mli, 3, mali_ostrzezenie_dla_podrozujacych).
+country_safety(tun, 3, tunezja_ostrzezenie_dla_podrozujacych).
+country_safety(fra, 2, francja_informacja_o_stanie_bezpieczenstwa_po_zamachach_terrorystycznych_w_paryzu).
+country_safety(bfa, 3, burkina_faso_aktualizacja_ostrzezenia_dla_podrozujacych).
+country_safety(bdi, 3, burundi_ostrzezenie_dla_podrozujacych).
+country_safety(sle, 2, sierra_leone_aktualizacja_ostrzezenia_dla_podrozujacych).
+country_safety(lbr, 2, liberia_aktualizacja_ostrzezenia_dla_podrozujacych).
+country_safety(gin, 2, gwinea_aktualizacja_ostrzezenia_dla_podrozujacych).
+country_safety(ven, 2, wenezuela_aktualizacja_ostrzezenia_dla_podrozujacych).
+country_safety(nga, 3, nigeria_aktualizacja_ostrzezenia_dla_podrozujacych).
+country_safety(idn, 2, indonezja_ostrzezenie_dla_podrozujacych).
+country_safety(sau, 1, arabia_saudyjska_ostrzezenie_dla_podrozujacych).
+country_safety(egy, 3, egipt_aktualizacja_ostrzezenia_dla_podrozujacych).
+country_safety(tur, 2, turcja_aktualizacja_ostrzezenia_dla_podrozujacych).
+country_safety(lbn, 3, liban_aktualizacja_ostrzezenia_dla_podrozujacych).
+country_safety(mys, 1, malezja_aktualizacja_ostrzezenia_dla_podrozujacych).
+country_safety(civ, 3, wybrzeze_kosci_sloniowej_ostrzezenie_dla_podrozujacych).
+country_safety(ken, 2, kenia_ostrzezenie_dla_podrozujacych).
+country_safety(pak, 3, pakistan_aktualizacja_ostrzezenia_dla_podrozujacych).
+country_safety(arm, 2, armenia_ostrzezenie_dla_podrozujacych).
+country_safety(aze, 2, azerbejdzan_ostrzezenie_dla_podrozujacych).
+country_safety(bel, 2, belgia_aktualizacja_komunikatu_dla_podrozujacych).
+
