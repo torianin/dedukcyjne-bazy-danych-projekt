@@ -7,31 +7,45 @@ airport_country(Airport, Country) :-
   airport(Airport, Country, _).
 
 flights_from_with_company(Airline, Airport) :-
-  flight(Airport, _, _, Airline). 
+  flight(Airport, _, _, _, _, Airline). 
 
 direct(From, To) :-
-  flight(From, To, _, _).
+  flight(From, To, _, _, _, _).
   
-gen_connection(From, To, Price, 1) :-
-  flight(From, To, Price, _),
+gen_connection(From, To, Price, Start, End, 1) :-
+  flight(From, To, Price, Start, End, _),
   From \= To.
-gen_connection(From, To, Price, Hops) :-
-  flight(From, Mid, P1, _),
-  gen_connection(Mid, To, P2, Hs),
+gen_connection(From, To, Price, Start, End, Hops) :-
+  flight(From, Mid, P1, Start, En1, _),
+  gen_connection(Mid, To, P2, St2, En2, Hs),
+  En1 =< St2,
   From \= To,
   count(airport(_), Na),
   Hs < Na, 
+  End is En2,
   Hops is Hs+1, 
   Price is P1+P2.
 
-cheapest_connection(From, To, Price) :-
-  min(gen_connection(From, To, P, _), P, Price).
+% Note: Start, End must be ground!
+possible_connection(From, To, Price, Start, End, Hops) :-
+  gen_connection(From, To, Price, St1, En1, Hops),
+  Start =< St1,
+  En1 =< End.
 
+cheapest_connection(From, To, Price) :-
+  airport(From),
+  airport(To),
+  min(gen_connection(From, To, P, _, _, _), P, Price).
+  
 min_hop_connection(From, To, Hops) :-
-  min(gen_connection(From, To, _, Hs), Hs, Hops).
+  airport(From),
+  airport(To),
+  min(gen_connection(From, To, _, _, _, Hs), Hs, Hops).
 
 cheap_flights_to(Destination, Price) :-
-  min(flight(_, Destination, P, _), P, Price).
+  airport(Destination),
+  min(flight(_, Destination, P, _, _, _), P, Price).
 
 avg_flight_price(Destination, AvgPrice) :-
-  avg(flight(_, Destination, Price, _), Price, AvgPrice).
+  airport(Destination),
+  avg(flight(_, Destination, Price, _, _, _), Price, AvgPrice).

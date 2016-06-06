@@ -1,31 +1,30 @@
 %
 % Flights:
-%  flight(from, to, price, company).
+%  flight(from, to, price, start, end, company).
 
-flight(krk, waw, 260, plllot).
-flight(krk, muc, 430, plllot).
-flight(krk, tlv, 2000, plllot).
-
-flight(waw, krk, 250, plllot).
-flight(waw, lhr, 608, plllot).
-flight(waw, cdg, 960, plllot).
-flight(waw, jfk, 1918, plllot).
-flight(waw, yyz, 1886, plllot).
-
-flight(lhr, waw, 920, plllot).
-
-flight(cdg, waw, 900, plllot).
-
-flight(muc, fco, 563, lufthansa).
-
-flight(fco, muc, 550, lufthansa).
-
-flight(tlv, waw, 1776, plllot).
-
-flight(jfk, waw, 3794, plllot).
-
-flight(yyz, waw, 4061, plllot).
-
-flight(yyz, yul, 497, aircanada).
-
-flight(yul, yyz, 500, aircanada).
+flight(krk, waw, 260, 420, 480, lot). % 1. 7 60
+flight(waw, krk, 250, 540, 600, lot). % 1. 9.0 60
+flight(krk, waw, 260, 720, 780, lot). % 1. 12 60
+flight(waw, krk, 250, 840, 900, lot). % 1. 14.0 60
+flight(krk, waw, 260, 960, 1020, lot). % 1. 16 60
+flight(waw, krk, 250, 1080, 1140, lot). % 1. 18.0 60
+flight(waw, lhr, 608, 600, 780, lot). % 1. 10 180
+flight(lhr, waw, 920, 840, 1020, lot). % 1. 14.0 180
+flight(waw, lhr, 608, 900, 1080, lot). % 1. 15 180
+flight(lhr, waw, 920, 1140, 1320, lot). % 1. 19.0 180
+flight(waw, lhr, 608, 1200, 1380, lot). % 1. 20 180
+flight(lhr, waw, 920, 1440, 1620, lot). % 1. 24.0 180
+flight(fco, muc, 550, 540, 660, lufthansa). % 1. 9 120
+flight(muc, fco, 563, 720, 840, lufthansa). % 1. 12.0 120
+flight(fco, muc, 550, 720, 840, lufthansa). % 1. 12 120
+flight(muc, fco, 563, 900, 1020, lufthansa). % 1. 15.0 120
+flight(fco, muc, 550, 1080, 1200, lufthansa). % 1. 18 120
+flight(muc, fco, 563, 1260, 1380, lufthansa). % 1. 21.0 120
+flight(krk, muc, 430, 480, 600, lufthansa). % 1. 8 120
+flight(krk, muc, 430, 840, 960, lufthansa). % 1. 14 120
+flight(krk, tlv, 2000, 540, 780, lot). % 1. 9 240
+flight(tlv, waw, 1776, 1080, 1320, lot). % 1. 18 240
+flight(waw, fco, 1050, 420, 600, klm). % 1. 7 180
+flight(waw, fco, 1050, 900, 1080, klm). % 1. 15 180
+flight(fco, kbp, 1300, 720, 900, klm). % 1. 12 180
+flight(fco, kbp, 1300, 1200, 1380, klm). % 1. 20 180

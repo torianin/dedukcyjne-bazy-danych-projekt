@@ -37,6 +37,6 @@ prev_months(Mn, Pr, Dys) :-
 time(Mn,Day,Hours,Minutes,TimeInMinutes) :-
   m(Mn),
   sum(prev_months(Mn, _, D), D, Sum1),
-  Days is Sum1+Day,
+  Days is Sum1+Day-1,
   TimeInHours is Days*24+Hours,
   TimeInMinutes is TimeInHours*60+Minutes.

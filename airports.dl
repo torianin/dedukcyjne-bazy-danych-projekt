@@ -2,9 +2,9 @@
 %
 % Airline companies
 
-company(plllot).
+company(lot).
 company(lufthansa).
-company(aircanada).
+company(klm).
 
 
 %
@@ -17,9 +17,9 @@ airport(Airport) :-
   city(City).
 
 operates(Airline, Airport) :-
-  flight(Airport, _, _, Airline).
+  flight(Airport, _, _, _, _, Airline).
 oprates(Airline, Airport) :-
-  flight(_, Airport, _, Airline).
+  flight(_, Airport, _, _, _, Airline).
 
 city(krakow).
 airport(krk, pol, krakow).
@@ -27,29 +27,19 @@ airport(krk, pol, krakow).
 city(warszawa).
 airport(waw, pol, warszawa).
 
-city(munchen).
-airport(muc, deu, munchen).
+city(monachium).
+airport(muc, deu, monachium).
 
 city(telaviv).
 airport(tlv, isr, telaviv).
 
-city(london).
-airport(lhr, gbr, london).
+city(londyn).
+airport(lhr, gbr, londyn).
 
-city(paris).
-airport(cdg, fra, paris).
+city(rzym).
+airport(fco, ita, rzym).
 
-city(newyork).
-airport(jfk, usa, newyork).
-
-city(roma).
-airport(fco, ita, roma).
-
-city(montreal).
-airport(yul, can, montreal).
-
-city(toronto).
-airport(yyz, can, toronto).
-
+city(kijow).
+airport(kbp, ukr, kijow).
 
 
