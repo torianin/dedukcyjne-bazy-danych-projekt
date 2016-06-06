@@ -1,7 +1,10 @@
 city_airport(City, Airport) :-
   city(City),
-  airport(Airport),
   airport(Airport, _, City).
+
+airport_country(Airport, Country) :-
+  country(Country),
+  airport(Airport, Country, _).
 
 flights_from_with_company(Airline, Airport) :-
   flight(Airport, _, _, Airline). 
@@ -27,3 +30,8 @@ cheapest_connection(From, To, Price) :-
 min_hop_connection(From, To, Hops) :-
   min(gen_connection(From, To, _, Hs), Hs, Hops).
 
+cheap_flights_to(Destination, Price) :-
+  min(flight(_, Destination, P, _), P, Price).
+
+avg_flight_price(Destination, AvgPrice) :-
+  avg(flight(_, Destination, Price, _), Price, AvgPrice).

@@ -5,6 +5,24 @@
 % Źródło danych iPolak
 %
 
+unsafe_place(Country) :-
+  country_safety_info(Country, Lvl, _),
+  Lvl > 0.
+unsafe_place(Airport) :-
+  airport_country(Airport, Country),
+  country_safety_info(Country, Lvl, _),
+  Lvl > 0.
+
+safe_country(Country) :-
+  country(Country),
+  not country_safety_info(Country, _, _).
+
+safe_place(Country) :-
+  country_safety(Country, 0, _).
+safe_place(Airport) :-
+  airport_country(Airport, Country),
+  country_safety(Country, 0, _).
+
 country_safety(Name, Level, Info) :-
   country_safety_info(Name, Level, Info).
 country_safety(Name, 0, safe) :-
