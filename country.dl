@@ -12,6 +12,7 @@ country_info(Country, Currency, SafetyLevel, VisaRequired) :-
   ).
 
 country(pol).
+country(ita).
 country(phl).
 country(bhs).
 country(lka).
