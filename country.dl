@@ -1,5 +1,16 @@
 % Źródło danych iPolak
 
+
+country_info(Country, Currency, SafetyLevel, VisaRequired) :-
+  country(Country),
+  country_currency(Country, Currency),
+  country_safety(Country, SafetyLevel, _),
+  ( not country_required_documents(Country, wiza),
+    VisaRequired is 0
+  ; country_required_documents(Country, wiza),
+    VisaRequired is 1
+  ).
+
 country(pol).
 country(phl).
 country(bhs).
